@@ -27,6 +27,7 @@ class NewsDetailsPage extends StatelessWidget {
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
+        backgroundColor: Colors.blueAccent,
         elevation: 2,
       ),
       body: SingleChildScrollView(

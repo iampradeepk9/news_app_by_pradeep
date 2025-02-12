@@ -9,6 +9,9 @@ class ApiService {
   Future<List<NewsArticle>> fetchNews(int page) async {
     try {
       final response = await http.get(Uri.parse("$baseUrl&page=$page"));
+      print('response.statusCode  ${response.statusCode}');
+      print('response.body  ${response.body}');
+
       if (response.statusCode == 200) {
         final jsonData = json.decode(response.body);
         List<dynamic> articles = jsonData['articles'];
